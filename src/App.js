@@ -1,19 +1,19 @@
 // import logo from './logo.svg';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Dashboard from './component/Dashbord';
-import Navbar from './part/Navbar';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./views/Home";
+import Login from "./views/Login";
+// import UserContextProvider from "./contexts/userContext";
+// import Home from "./views/Home";
+// import Dashboard from './component/Dashbord';
+// import Navbar from './part/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<Dashboard/>}/>
-        </Routes>
-      </Router>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 
