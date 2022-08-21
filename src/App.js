@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import List from "./Lemparan_props/List";
 import Home from "./views/Home";
 import Login from "./views/Login";
 // import UserContextProvider from "./contexts/userContext";
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/listproduct" element={<List />} />
     </Routes>
   );
 }

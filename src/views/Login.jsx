@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   //ambil data dari context
-  const [user, setUser] = useContext(UserContext);
+  const [user] = useContext(UserContext);
+  // const [personal, setPersonal] = useContext(UserContext);
   const nav = useNavigate();
 
   const handleSubmit = (e) => {
@@ -14,15 +15,15 @@ const Login = () => {
     let password = e.target.password.value;
     let id = Date.now();
 
-    setUser({
-      id: id,
-      email: email,
-    });
+    // setPersonal({
+    //   id: id,
+    //   email: email,
+    // });
     nav("/");
   };
   return (
     <>
-      <h3>Login</h3>
+      <h3>Login {user.email}</h3>
       <form action="auth_form" autoComplete="off" onSubmit={handleSubmit}>
         <div className="form_group">
           <label htmlFor="email">Email</label>
